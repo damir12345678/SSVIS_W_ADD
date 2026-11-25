@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><body>
+<form onsubmit="check(event)">
+  <input type="password" id="pwd" placeholder="Пароль">
+  <button>Войти</button>
+</form>
+<script>
+function check(e) {
+  e.preventDefault();
+  if (document.getElementById('pwd').value === 'TOPSECRET2026') {
+    localStorage.setItem('auth', '1');
+    location.href = 'report.html';
+  } else {
+    alert('Неверный пароль');
+  }
+}
+</script>
+</body></html>
